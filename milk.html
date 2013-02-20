@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Milk Calculator</title>
+	<style type="text/css">
+		body		{
+					font-family: verdana, sans-serif;
+					font-size: 12px;
+					}
+	</style>
+	<script type="text/javascript">
+		function isNum(num){
+		    var reg = /^\d+(.\d+)?$/;
+		    if(reg.test(num)) return true;
+		    return false;
+		}
+	    function calWater(milk) {
+	    	return milk / 56 * 50;
+	    }
+	    function calPowder(milk) {
+	    	return milk / 56;
+	    }
+
+	</script>
+</head>
+<body>
+<form action="" onSubmit="return false;">
+<div><strong>Karicare 一段 奶粉计算器 50 + 1 => 56</strong></div><br/>
+<div>想要得到的奶量(ml)</div>
+<div>
+<input type="text" name="milk" style="width: 80px; border-width: 1px; padding: 5px" onkeyup=" if (!isNum(this.form.milk.value)) {water = 0; powder=0}; water = calWater(this.form.milk.value).toFixed(1); powder = calPowder(this.form.milk.value).toFixed(2); watervol.innerHTML = water; powdervol.innerHTML = powder;"/>
+</div>
+<div>水量(ml)</div>
+<div id="watervol">0</div>
+<div>奶粉(勺)</div>
+<div id="powdervol">0</div>
+</form>
+
+</body>
+</html>
