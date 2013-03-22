@@ -7,7 +7,7 @@
             var list = lists[index];
             for (var i in list) {
                 if (isInNet(ip, list[i][0], list[i][1])) {
-                    return 'HTTP 172.16.251.58:3128';
+                    return 'PROXY 172.16.251.58:3128';
                 }
             }
             return 'HTTPS ssl4.hhservers.com:443';
