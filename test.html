@@ -1,0 +1,22 @@
+<html>
+            <head>
+                <title>good news</title>
+                                <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+            </head>
+            <body>
+Wifi status: ON
+<span id=switch><a href=/cgi-bin/wifioff>turn me on</a></span>
+
+
+<script type="text/javascript">
+$(function(){
+    $("a").click(function(event) {
+              $("#switch a").remove();
+              $("#switch").text("...");
+    });
+});
+</script>
+</body>
+
+</html>
+
